@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn React: Introduction - Codecademy | NickOD.xyz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +23,169 @@
         course</a>
     </p>
 
-    <h2></h2>
+    <h2>Intro to JSX</h2>
+
+    <section>
+      <h3>Why React</h3>
+      <ul>
+        <li>React is known for its speed and responsiveness, allowing apps to handle complex updates efficiently.</li>
+        <li>React promotes modularity by breaking down code into smaller, reusable components, improving
+          maintainability.</li>
+        <li>It excels in scalability, making it suitable for large programs that involve frequent data changes.</li>
+        <li>React is flexible and can be used for various projects beyond web app development, opening up opportunities
+          for exploration.</li>
+        <li>React's popularity in the industry makes learning and understanding it valuable, enhancing employability
+          prospects.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>What is JSX?</h3>
+      <ul>
+        <li>JSX is a syntax extension for JavaScript used with React.</li>
+        <li>JSX code resembles HTML and is written within JavaScript files.</li>
+        <img src="./assests/images/jsxCode.jpg" alt="jsx code">
+        <li>JSX is not valid JavaScript, so it needs to be compiled before it can be understood by web browsers.</li>
+        <li>A JSX compiler translates JSX code into regular JavaScript.</li>
+        <li>The compilation process ensures that the JavaScript file containing JSX is compatible with web browsers.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>JSX Elements</h3>
+      <ul>
+        <li>A JSX element is the basic unit of JSX syntax.</li>
+        <li>JSX elements resemble HTML syntax.</li>
+        <img src="./assests/images/jsxElement.jpg" alt="jsx element">
+        <li>JSX elements are typically written within JavaScript files.</li>
+        <li>JSX elements can be similar to their HTML counterparts but are found within JavaScript files instead of HTML
+          files.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>JSX Elements & their Surroundings</h3>
+      <ul>
+        <li>JSX elements are treated as JavaScript expressions and can be used anywhere JavaScript expressions are
+          allowed.</li>
+        <li>JSX elements can be saved in variables:</li>
+        <img src="./assests/images/jsxElementVariable.jpg" alt="jsx element saved to a variable">
+        <li>JSX elements can be stored in objects or arrays:</li>
+        <img src="./assests/images/jsxElementObject.jpg" alt="jsx elements stored in an object">
+        <li>JSX elements offer flexibility and can be manipulated and used like any other JavaScript expression.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Attributes in JSX</h3>
+      <ul>
+        <li>JSX elements can have attributes similar to HTML elements.</li>
+        <li>JSX attributes follow an HTML-like syntax: name="value" format.</li>
+        <img src="./assests/images/jsxAttributesSyntax.jpg" alt="jsx attribute syntax">
+        <li>Attribute values are typically wrapped in quotes.</li>
+        <img src="./assests/images/jsxAttributeExample.jpg" alt="jsx attribute example">
+        <li>A single JSX element can have many attributes, just like in HTML:</li>
+        <img src="./assests/images/jsxAttributesExample.jpg" alt="jsx with many attributes">
+      </ul>
+    </section>
+
+    <section>
+      <h3>Nested JSX</h3>
+      <ul>
+        <li>JSX elements can be nested inside other JSX elements, similar to HTML.</li>
+        <img src="./assests/images/nestedjsx.jpg" alt="nested jsx">
+        <li>For better readability, you can use line breaks and indentation, similar to HTML:</li>
+        <img src="./assests/images/nestedjsxIndented.jpg" alt="indented nested jsx">
+        <li>If a JSX expression spans multiple lines, it should be wrapped in parentheses.</li>
+        <img src="./assests/images/nestedjsxWrapped.jpg" alt="wrapped multi line jsx">
+        <li>Nested JSX expressions can be assigned to variables or passed to functions like non-nested JSX expressions:
+        </li>
+        <img src="./assests/images/nestedjsxWrappedVariable.jpg" alt="nested jsx variable">
+      </ul>
+    </section>
+
+    <section>
+      <h3>JSX Outer Elements</h3>
+      <ul>
+        <li>A JSX expression must have exactly one outermost element.</li>
+        <li>The opening tag of the JSX expression and the closing tag must belong to the same JSX element.</li>
+        <li>The following would work fine:</li>
+        <img src="./assests/images/jsxOuterElementCorrect.jpg" alt="jsx outer element example">
+        <li>But this would not work and would throw errors:</li>
+        <img src="./assests/images/jsxOuterElementIncorrect.jpg" alt="jsx element with an error">
+        <li>If you encounter an error due to multiple outer elements, the solution is to wrap the JSX expression in a
+          <div> element or any other suitable parent element.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Rendering JSX Explained</h3>
+      <ul>
+        <li>Rendering in React involves specifying what content to render and where to place that content.</li>
+        <li>The render() method is used to render JSX expressions.</li>
+        <img src="./assests/images/jsxRendering.jpg" alt="jsx rendering">
+        <li>To determine where to place the content, the first line uses the getElementById() method of the document
+          object to get the HTML element with the specified ID ('app' in this case) and stores it in the container
+          variable.</li>
+        <img src="./assests/images/jsxRenderingFirstLine.jpg" alt="jsx rendering first line">
+        <li>The createRoot() function from the react-dom/client library is used to create a React root from the
+          container, and the resulting root is stored in the root variable. This establishes the target location for
+          rendering the content.</li>
+        <img src="./assests/images/jsxRenderingSecondLine.jpg" alt="jsx rendering second line">
+        <li>Finally, the render() method of the root object is called, passing in the JSX expression (<h1>Hello world
+          </h1>) as the content to be rendered. This triggers the rendering process, displaying the specified content in
+          the designated location.</li>
+        <img src="./assests/images/jsxRenderingThirdLine.jpg" alt="jsx rendering third line">
+      </ul>
+    </section>
+
+    <section>
+      <h3>Passing a Variable to render()</h3>
+      <ul>
+        <li>The render() method in React can accept a variable as its argument, as long as the variable evaluates to a
+          JSX expression.</li>
+        <img src="./assests/images/renderVariable.jpg" alt="passing a veriable to render">
+        <li>In the example, a JSX expression representing a to-do list is saved in the toDoList variable.</li>
+        <li>The createRoot() function is used to create a React root from the container element.</li>
+        <li>The render() method of the root object is called, and the toDoList variable is passed as the argument. The
+          JSX expression stored in toDoList will be evaluated and rendered in the designated location.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3></h3>
+      <ul>
+        <li>The Virtual DOM</li>
+        <li>When using the render() method in React, it only updates the DOM elements that have changed.</li>
+        <li>If the exact same JSX expression is rendered twice in a row, the second render will not make any changes to
+          the DOM.</li>
+        <img src="./assests/images/virtualDOM.jpg" alt="duplicate root render">
+        <li>React achieves this efficient update process by utilizing the concept of the Virtual DOM.</li>
+        <li>The Virtual DOM is a lightweight representation of the actual DOM.</li>
+        <li>When changes are made to the React components, React compares the Virtual DOM with the previous version to
+          identify the specific elements that need to be updated.</li>
+        <li>Only the necessary changes are then applied to the real DOM, resulting in better performance and efficiency.
+        </li>
+        <li>The use of the Virtual DOM is one of the key factors contributing to React's success in efficiently updating
+          and rendering UI components.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Review: Intro to JSX</h3>
+      <ul>
+        <li>React is a modular, scalable, flexible, and popular front-end framework.</li>
+        <li>JSX is a syntax extension for JavaScript which allows us to treat HTML as expressions.</li>
+        <li>They can be stored in variables, objects, arrays, and more!</li>
+        <li>JSX elements can have attributes and be nested within each other, just like in HTML.</li>
+        <li>JSX must have exactly one outer element, and other elements can be nested inside.</li>
+        <li>createRoot() from react-dom/client can be used to create a React root at the specified DOM element.</li>
+        <li>A React root’s render() method can be used to render JSX on the screen.</li>
+        <li>A React root’s render() method only updates DOM elements that have changed using the virtual DOM.</li>
+      </ul>
+    </section>
 
     <section>
       <h3></h3>
