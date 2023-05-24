@@ -33,7 +33,9 @@ To be added...
 
 ## Useful Resources
 
-To be added...
+[React - Common Components](https://react.dev/reference/react-dom/components/common#)
+
+[Codecademy - Cheatsheets](https://www.codecademy.com/learn/learn-react-introduction/modules/react-101-jsx-u/cheatsheet)
 
 <br>
 

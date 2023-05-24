@@ -185,10 +185,246 @@
         <li>A React root’s render() method can be used to render JSX on the screen.</li>
         <li>A React root’s render() method only updates DOM elements that have changed using the virtual DOM.</li>
       </ul>
+      <p>
+        <a href="https://www.codecademy.com/learn/learn-react-introduction/modules/react-101-jsx-u/cheatsheet">Codecademy
+          -
+          JSX Cheatsheet</a>
+      </p>
+    </section>
+
+    <h2>React: The Virtual DOM</h2>
+
+    <section>
+      <h3>The Virtual DOM Explained</h3>
+      <ul>
+        <li>DOM manipulation, the process of updating the web page's structure, is slower compared to other JavaScript
+          operations.</li>
+        <li>Many JavaScript frameworks tend to update the DOM more than necessary, resulting in inefficiencies.</li>
+        <li>React addresses this issue with the concept of the Virtual DOM.</li>
+        <li>In React, there is a corresponding "virtual DOM object" for every real DOM object. The virtual DOM object is
+          a lightweight copy of the real DOM object.</li>
+        <li>The virtual DOM object has the same properties as the real DOM object but lacks the power to directly change
+          what's displayed on the screen.</li>
+        <li>When a JSX element is rendered, every virtual DOM object is updated.</li>
+        <li>Updating the virtual DOM is much faster because it doesn't involve drawing anything on the screen. It's like
+          editing a blueprint instead of moving rooms in a house.</li>
+        <li>After updating the virtual DOM, React compares it with a virtual DOM snapshot taken before the update. This
+          process is called "diffing."</li>
+        <li>By comparing the new virtual DOM with the pre-update version, React determines which virtual DOM objects
+          have changed.</li>
+        <li>React then updates only the changed objects on the real DOM, rather than rebuilding the entire DOM. This
+          selective updating is efficient.</li>
+        <li>React's ability to update only the necessary parts of the DOM contributes to its reputation for performance
+          and efficiency.</li>
+      </ul>
+    </section>
+
+    <h2>Advanced JSX</h2>
+
+    <section>
+      <h2>class vs className</h2>
+      <ul>
+        <li>In HTML, the attribute name for defining the CSS class of an element is "class".</li>
+        <img src="./assests/images/htmlClassExample.jpg" alt="html class example">
+        <li>However, in JSX, you cannot use the attribute name "class" because it is a reserved word in JavaScript.</li>
+        <li>Instead, you need to use "className" as the attribute name in JSX.</li>
+        <img src="./assests/images/jsxClassNameExample.jpg" alt="jsx classname example">
+        <li>JSX is translated into JavaScript, and using "className" ensures compatibility and avoids conflicts with the
+          reserved word "class".</li>
+        <li>When the JSX is rendered, the "className" attributes are automatically translated and rendered as "class"
+          attributes in the resulting HTML.</li>
+      </ul>
     </section>
 
     <section>
-      <h3></h3>
+      <h2>Self-Closing Tags</h2>
+      <ul>
+        <li>In HTML, some elements like <br> and <input> can be written with or without a closing slash before the final
+          angle bracket.</li>
+        <img src="./assests/images/htmlSelfClosingTags.jpg" alt="html self-closing tags">
+        <li>However, in JSX, it is mandatory to include the closing slash in self-closing tags. Forgetting to include
+          the slash will result in an error.</li>
+        <img src="./assests/images/jsxSelfClosingTags.jpg" alt="jsx self-closing tags">
+        <li>Remember to always use the closing slash in self-closing tags in JSX to ensure proper syntax and avoid
+          errors.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Curly Braces in JSX</h2>
+      <ul>
+        <li>When you write code in between the tags of a JSX element, it is treated as JSX, not regular JavaScript.</li>
+        <li>To indicate that you want a code snippet to be treated as regular JavaScript within JSX, you need to wrap it
+          in curly braces {}.</li>
+        <img src="./assests/images/curlyBraces.jpg" alt="curly braces">
+        <li>By using curly braces, you can execute JavaScript expressions and statements within JSX.</li>
+        </li>
+        <li>Curly braces allow you to inject dynamic and executable JavaScript code within JSX elements.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Variables in JSX</h2>
+      <ul>
+        <li>When you inject JavaScript into JSX, the JavaScript code has access to variables declared in the same
+          environment.</li>
+        <li>You can access variables while inside a JSX expression, even if those variables were declared outside the
+          JSX code block.</li>
+        <img src="./assests/images/variablesInJSX.jpg" alt="variables in jsx">
+        <li>The value of the variable will be evaluated and inserted into the JSX during rendering.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Variable Attributes in JSX</h2>
+      <ul>
+        <li>Variables can be used to set attributes in JSX by wrapping them in curly braces {}.</li>
+        <img src="./assests/images/variableAttributes.jpg" alt="variable attributes">
+        <li>Each attribute can be set on a separate line for better readability, especially when dealing with multiple
+          attributes.</li>
+        <li>Object properties can also be used to set attributes. You can access the desired property using dot notation
+          or square brackets.</li>
+        <img src="./assests/images/objectVariableAttributes.jpg" alt="object variable attributes">
+        <li>By using variables and object properties, you can make your JSX code more dynamic and reusable, allowing for
+          easy updates and customization.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Event Listeners in JSX</h2>
+      <ul>
+        <li>JSX elements can have event listeners, similar to HTML elements.</li>
+        <li>Event listeners in JSX are created by using a special attribute on the JSX element.</li>
+        <li>The event listener attribute's name should follow the pattern of "on" + event type, such as onClick or
+          onMouseOver.</li>
+        <li>The value of an event listener attribute should be a function.</li>
+        <img src="./assests/images/eventListenerJSX.jpg" alt="event listener in jsx">
+        <li>The function clickAlert should be defined elsewhere in the code.</li>
+        <img src="./assests/images/eventListenersFunction.jpg" alt="the event listeners function code">
+        <li>In JSX, event listener names are written in camelCase, such as onClick or onMouseOver.</li>
+        <li>In HTML, event listener names are written in all lowercase, such as onclick or onmouseover.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>JSX Conditionals: If Statements that do Work</h2>
+      <ul>
+        <li>In JSX, you cannot directly inject an if statement.</li>
+        <li>One way to express conditionals in JSX is to write the if statement outside of the JSX code.</li>
+        <img src="./assests/images/jsxConditionals.jpg" alt="jsx conditionals">
+        <li>The if statement can be used to conditionally determine which JSX code to render.</li>
+        <li>By placing the if statement on the outside, there is no need for JavaScript injection within JSX tags.</li>
+        <li>This approach is a common way to handle conditionals in JSX.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>JSX Conditionals: The Ternary Operator</h2>
+      <ul>
+        <li>The ternary operator, written as x ? y : z, is a compact way to write conditionals in JSX.</li>
+        <li>It works the same way in React as it does in regular JavaScript.</li>
+        <li>The ternary operator is commonly used in JSX expressions.</li>
+        <li>Inside the curly braces of a JSX expression, you can use the ternary operator to conditionally render
+          different content.</li>
+        <li>The expression before the question mark (?) is evaluated and determines whether it is truthy or falsy.</li>
+        <li>If the expression is truthy, the value before the colon (:) is returned. Otherwise, the value after the
+          colon is returned.</li>
+        <li>The ternary operator is often used to conditionally render different JSX elements or to assign different
+          values to variables based on a condition.</li>
+        <img src="./assests/images/ternaryOperator.jpg" alt="ternary operator">
+        <li>In the provided example, the ternary operator is used to conditionally set the value of the headline
+          variable based on the comparison between age and drinkingAge.</li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>JSX Conditionals: &&</h2>
+      <ul>
+        <li>The && operator is another way to write conditionals in JSX, commonly used for rendering content
+          conditionally.</li>
+        <li>It works similarly to the logical AND operator in JavaScript.</li>
+        <img src="./assests/images/jsxConditionalsAndOperator.jpg" alt="jsx conditionals && operator">
+        <li>If the expression on the left of the && is true, the JSX on the right of the && will be rendered.</li>
+        <li>If the expression on the left is false, the JSX on the right will be ignored and not rendered.</li>
+        <li>The && operator is useful for conditionals that should sometimes perform an action and other times do
+          nothing at all.</li>
+        <li>It can help simplify conditional rendering by avoiding the need for additional if statements or ternary
+          operators.</li>
+        <li>In the provided example, the && operator is used to conditionally render different list items based on the
+          values of baby and age.</li>
+        <li>The list item containing "Pizza" will be rendered if baby is false.</li>
+        <li>The list items containing "Brussels Sprouts", "Oysters", and "Grappa" will be rendered based on the
+          different age conditions.</li>
+        <li>Only the list items corresponding to true expressions will be included in the final JSX output.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>.map in JSX</h2>
+      <ul>
+        <li>The .map() method is commonly used in React to create a list of JSX elements efficiently.</li>
+        <li>When you have an array and want to transform each element into JSX, you can use .map() to iterate over the
+          array and return a new array of JSX elements.</li>
+        <img src="./assests/images/mapInJSX.jpg" alt="map in jsx">
+        <li>In the provided example, the array strings contains a list of strings.</li>
+        <li>By calling .map() on strings, we create a new array listItems where each string is transformed into an
+        <li> element.</li>
+        <li>The arrow function is used as the transformation function in the .map() call. It takes each string as input
+          and returns the corresponding JSX
+        <li> element.</li>
+        <li>The {listItems} expression is used to include the array of JSX elements in the JSX code. It will be
+          evaluated to the array of
+        <li> elements.</li>
+        <li>JSX elements don't have to be in an explicit array. You can directly include them as individual elements.
+        </li>
+        <img src="./assests/images/mapInJSX2.jpg" alt="jsx elements list items">
+        <li>Alternatively, you can store the JSX elements in an array, like liArray, and include the array using curly
+          braces, like {liArray}.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Keys</h2>
+      <ul>
+        <li>Keys are JSX attributes used to uniquely identify elements in a list.</li>
+        <li>Keys are necessary when you have a list where the items need to maintain their memory or when the order of
+          the list might be shuffled between renders.</li>
+        <img src="./assests/images/keys.jpg" alt="keys">
+        <li>Keys are not used for any visible effects in the rendered output. They are used internally by React to
+          optimize list rendering and ensure correct item ordering.</li>
+        <li>If you omit keys when they are required, React may mistakenly reorder the list items or cause other issues.
+        </li>
+        <li>If your list items don't have memory or the list order is static, you may not need to use keys. However,
+          it's generally recommended to use keys if you're unsure or if your list might have dynamic changes.</li>
+        <li>Using unique and stable values as keys, such as IDs or unique identifiers from data, is recommended to
+          ensure consistent behavior and performance in React.</li>
+        <img src="./assests/images/mapUniqueKey.jpg" alt="using map to create unique keys">
+        <li>In the example above, we're using the .map() method in order to help us create unique keys</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>React.createElement</h2>
+      <ul>
+        <li>JSX is a popular syntax extension for writing React code, but it is possible to write React code without
+          JSX.</li>
+        <img src="./assests/images/reactElement.jpg" alt="react element">
+        <li>JSX elements are compiled into calls to React.createElement().</li>
+        <li>The React.createElement() method takes three arguments: the element type, the element's properties (or
+          "props"), and the element's children.</li>
+        <img src="./assests/images/reactCreateElement.jpg" alt="react createElement">
+        <li>The first argument of React.createElement() is the type of the element, in this case, the string "h1".</li>
+        <li>The second argument is an object representing the element's properties or attributes. Since no properties
+          are specified in the example (null is passed), it is equivalent to providing an empty object {} in JSX.</li>
+        <li>The third argument is the children of the element, in this case, the string "Hello world".</li>
+        <li>React.createElement() returns a React element that can be rendered in a React component.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2></h2>
       <ul>
         <li></li>
         <li></li>
