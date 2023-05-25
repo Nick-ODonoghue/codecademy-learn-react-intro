@@ -37,6 +37,8 @@ To be added...
 
 [Codecademy - Cheatsheets](https://www.codecademy.com/learn/learn-react-introduction/modules/react-101-jsx-u/cheatsheet)
 
+[MDN - Export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export)
+
 <br>
 
 ## Acknowledgments

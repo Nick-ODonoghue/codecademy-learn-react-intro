@@ -423,6 +423,206 @@
       </ul>
     </section>
 
+    <h2>React Components</h2>
+
+    <section>
+      <h2>Components</h2>
+      <ul>
+        <li>React applications are built using components.</li>
+        <li>A component is a small, reusable piece of code that has a specific responsibility.</li>
+        <li>Components are responsible for rendering HTML and updating it when data changes.</li>
+        <li>Components can be created using the React library, which is imported at the beginning of the code: import
+          React from 'react';</li>
+        <li>The React library provides the necessary functions and utilities for creating and working with components in
+          React applications.</li>
+        <img src="./assests/images/components.jpg" alt="components">
+      </ul>
+    </section>
+
+    <section>
+      <h2>Import React</h2>
+      <ul>
+        <li>To use React and its features in your code, you need to import it first.</li>
+        <img src="./assests/images/importReact.jpg" alt="import react">
+        <li>The import statement import React from 'react'; imports the React library and assigns it to an object named
+          React.
+        </li>
+        <li>This import statement should be placed at the beginning of your code file before using any React-related
+          features.</li>
+        <li>The 'react' string in the import statement refers to the name of the package/module that contains the React
+          library.</li>
+        <li>Make sure you have the 'react' package installed as a dependency in your project for the import to work
+          correctly.</li>
+        <li>Importing React allows you to access and use various features and functionalities provided by the React
+          library, such as creating and working with components, using hooks, and more.</li>
+        <li>It's important to import React in every file where you want to use React components or features.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Import ReactDOM</h2>
+      <ul>
+        <li>In addition to importing React, we also need to import ReactDOM to interact with the DOM.</li>
+        <img src="./assests/images/importReactDOM.jpg" alt="import ReactDOM">
+        <li>The import statement import ReactDOM from 'react-dom'; imports the ReactDOM library and assigns it to an
+          object named ReactDOM.</li>
+        <li>The 'react-dom' string in the import statement refers to the name of the package/module that contains the
+          ReactDOM library.</li>
+        <li>ReactDOM provides methods that specifically deal with interacting with the DOM, such as rendering React
+          components into the browser's DOM.</li>
+        <li>Methods imported from 'react' are focused on React-specific functionality and are not directly related to
+          manipulating the DOM.</li>
+        <li>While React allows us to create and manage components, ReactDOM provides the means to render those
+          components into the actual DOM elements of a web page.</li>
+        <li>Make sure you have the 'react-dom' package installed as a dependency in your project for the import to work
+          correctly.</li>
+        <li>Importing ReactDOM is necessary if you want to render React components into the DOM and interact with the
+          browser's DOM elements.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Create a Function Component</h2>
+      <ul>
+        <li>React components are small, reusable chunks of code responsible for rendering HTML and updating it when data
+          changes.</li>
+        <li>Components are like building blocks that make up a React application, representing different parts of the
+          interface.</li>
+        <li>Function components are a way to define React components using JavaScript functions.</li>
+        <li>Function components have become the standard in modern React applications, replacing class components with
+          the introduction of Hooks.</li>
+        <img src="./assests/images/functionComponent.jpg" alt="function component">
+        <li>Function components can be defined by creating a JavaScript function with a name that represents the
+          component.</li>
+        <li>Inside the function, a return statement is used to return a React element in JSX syntax, which represents
+          the HTML to be rendered.</li>
+        <li>The example code shows the definition of a function component named MyComponent that returns an < h1>
+            element
+            with a specific message.</li>
+        <li>The import React from 'react'; statement is used to import the necessary React library.</li>
+        <li>The function component is exported using export default so it can be used elsewhere in the application.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Name a Functional Component</h2>
+      <ul>
+        <li>When declaring a new functional component, it should be given a name.</li>
+        <img src="./assests/images/functionalComponentNaming.jpg" alt="functional component naming">
+        <li>The name of a functional component should start with a capital letter and follow the convention of
+          PascalCase.</li>
+        <li>Starting the name with capitalization distinguishes it as a React component rather than an HTML tag.</li>
+        <li>This capitalization rule is specific to React and is important to ensure that the component is interpreted
+          correctly by React.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Functional Component Instructions</h2>
+      <ul>
+        <li>In app.js:</li>
+        <img src="./assests/images/functionalComponentInstructions.jpg" alt="app.js">
+        <li>Importing React from 'react' creates a JavaScript object containing necessary properties for React.</li>
+        <li>Defining a JavaScript function creates a function component, which acts as a factory for producing instances
+          of itself.</li>
+        <li>The function component needs a name written in Pascal case, such as UpperCamelCase.</li>
+        <li>The body of the function component, enclosed in curly braces, contains instructions for building a React
+          component. It can be seen as JSX code.</li>
+        <li> The JSX code inside the return statement of the function component acts as the instructions for building a
+          React component.</li>
+        <li>Remember, the function component is responsible for rendering HTML and defining the structure and behavior
+          of the React component it represents.</li>
+        <li>In index.js:</li>
+        <img src="./assests/images/functionalComponentInstructionsIndexJS.jpg" alt="index.js">
+        <li>Importing ReactDOM from 'react-dom/client' creates a JavaScript object with methods for interacting with the
+          DOM, such as ReactDOM.createRoot().</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>The Return Keyword in Functional Components</h2>
+      <ul>
+        <li>Functional components in React are similar to regular JavaScript functions and act as factories that
+          assemble portions of the user interface based on provided instructions.</li>
+        <li>The instructions for a functional component are defined within the function body, delimited by curly braces.
+        </li>
+        <img src="./assests/images/functionalComponentBody.jpg" alt="functional component body">
+        <li>The instructions can include a combination of markup (JSX), CSS, and JavaScript to produce the desired
+          result.</li>
+        <img src="./assests/images/functionalComponentReturnKeyword.jpg" alt="return keyword in a functional component">
+        <li>It is essential to include a return statement in the function body, as the function is expected to return a
+          JSX element that can be rendered onto the browser screen.</li>
+        <li>The returned JSX element represents the output of the functional component and determines what will be
+          displayed.</li>
+        <li>Remember, defining a functional component and providing the necessary instructions is only the first step.
+          To actually render the component onto the browser screen, it needs to be used or referenced in another part of
+          the application.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Importing & Exporting React Components</h2>
+      <ul>
+        <li>In a React application, the top-level file is usually named App.js, and the entry point is index.js.</li>
+        <li>Components can be defined in separate files for organization and reusability.</li>
+        <li>To make a component available for use in other files, it needs to be exported.</li>
+        <img src="./assests/images/exportFunction.jpg" alt="export function">
+        <li>Exporting a component is done by using the export default syntax followed by the component name.</li>
+        <li>In the file where the component will be used (e.g., index.js), it can be imported using the import statement
+          and specifying the file path.</li>
+        <img src="./assests/images/importFunction.jpg" alt="import function">
+        <li>Once imported, the component can be used and rendered in the desired location within the file.</li>
+        <li>By exporting and importing components, we can create a modular structure in our React application and easily
+          reuse components across different files.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Using & Rendering a Component</h2>
+      <ul>
+        <li>To use a function component, we can treat it like an HTML tag and include it in our JSX code.</li>
+        <img src="./assests/images/selfClosingSyntax.jpg" alt="self closing syntax">
+        <li>The self-closing tag syntax
+          <MyComponent /> can be used to include the component.
+        </li>
+        <img src="./assests/images/nestedSyntax.jpg" alt="nested syntax">
+        <li>If needed, components can be nested within opening and closing tags, like <MyComponent>
+            <OtherComponent />
+          </MyComponent>.</li>
+        <li>To render our component to the browser, we need to use the methods from the react-dom library in the entry
+          point file (e.g., index.js).</li>
+        <img src="./assests/images/reactDOM.jpg" alt="reactDOM">
+        <li>First, we call ReactDOM.createRoot() and pass it a DOM element where the component will be rendered.</li>
+        <li>The createRoot() method creates a root container for the DOM element and returns a reference to the root.
+        </li>
+        <img src="./assests/images/render.jpg" alt="render">
+        <li>Finally, we call the .render() method on the root container and pass the component as JSX syntax to display
+          it in the DOM.</li>
+        <li>React will take over managing the DOM inside the specified root element, and any updates to the UI will be
+          handled efficiently by React.</li>
+        <li>By using createRoot() and render(), we can set up the initial rendering of our component in the specified
+          DOM element and allow React to manage the UI updates from that point onwards.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Review: React Components</h2>
+      <ul>
+        <li>React applications are made up of components.</li>
+        <li>Components are responsible for rendering pieces of the user interface.</li>
+        <li>To create components and render them, react and reactDOM must be imported.</li>
+        <li>React components can be defined with Javascript functions to make function components.</li>
+        <li>Function component names must start with a capitalized letter, and Pascal case is the adopted naming
+          convention.</li>
+        <li>Function components must return some React elements in JSX syntax.</li>
+        <li>React components can be exported and imported from file to file.</li>
+        <li>A React component can be used by calling the component name in an HTML-like self-closing tag syntax.</li>
+        <li>Rendering a React component requires using .createRoot() to specify a root container and calling the
+          .render() method on it.</li>
+        <li></li>
+      </ul>
+    </section>
+
     <section>
       <h2></h2>
       <ul>
