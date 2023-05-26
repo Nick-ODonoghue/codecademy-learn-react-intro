@@ -701,6 +701,43 @@
       </ul>
     </section>
 
+    <h2>Components Render Other Components</h2>
+
+    <section>
+      <h2>Returning Another Component</h2>
+      <ul>
+        <li>Components in React can interact with each other by passing information or returning other components.</li>
+        <li>A component can return another component as part of its JSX structure.</li>
+        <img src="./assests/images/returningAnotherComponent.jpg" alt="Returning Another Component">
+        <li>By returning another component, you can compose your UI by combining multiple components together.</li>
+        <li>In the example provided, the ItemBox component returns an instance of the PurchaseButton component, allowing
+          them to be rendered together.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Apply a Component in a Render Function</h2>
+      <ul>
+        <li>Components can be applied in a render function by importing them into the file.</li>
+        <li>In the top-level file (e.g., App.js), import the desired component using the appropriate path.</li>
+        <img src="./assests/images/componentInRenderFunction.jpg" alt="component in render function">
+        <li>Inside the render function (e.g., App component), use the imported component as a JSX element.</li>
+        <li>The imported component can be considered a child component of the parent component.</li>
+        <li>Breaking a component into smaller extracted components allows for reusability and the construction of more
+          complex components.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Review: Components Render Other Components</h2>
+      <ul>
+        <li>A React application can contain multiple components.</li>
+        <li>Components can interact with each other by returning instances of each other. </li>
+        <li>Components interacting allows them to be broken into smaller components, stored into separate files, and
+          reused when necessary.</li>
+      </ul>
+    </section>
+
     <section>
       <h2></h2>
       <ul>
