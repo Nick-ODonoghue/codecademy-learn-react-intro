@@ -623,6 +623,84 @@
       </ul>
     </section>
 
+    <h2>Components & Advanced JSX</h2>
+
+    <section>
+      <h2>Use Multiline JSX in a Component</h2>
+      <ul>
+        <li>When working with multi-line JSX expressions, it is recommended to wrap them in parentheses.</li>
+        <li>This is important to ensure the proper interpretation of the JSX syntax and maintain clarity in the code.
+        </li>
+        <img src="./assests/images/multilineJSXComponent.jpg" alt="multiline JSX in a component">
+        <li>In the given example, the QuoteMaker component returns a multi-line JSX expression representing the HTML
+          structure of a quote.</li>
+        <li>The entire JSX expression is wrapped in parentheses to indicate that it is a single expression.</li>
+        <li>The use of parentheses helps in maintaining readability and avoiding any potential syntax errors when
+          dealing with multi-line JSX.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Use a Variable Attribute in a Component</h2>
+      <ul>
+        <li>To render a React component with an image and its properties, we can use a JavaScript object to store the
+          image information.</li>
+        <img src="./assests/images/variableAttributeinaComponent.jpg" alt="variable attribute in a component">
+        <li>Use JSX syntax to render the image using the img element.</li>
+        <li>Inject JavaScript code inside curly braces to set attribute values dynamically.</li>
+        <li>Use the object's properties to set the image source, alt text, and width.</li>
+        <li>JavaScript injections inside the return statement enable dynamic rendering in JSX.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Putting Logic in a Function Component</h2>
+      <ul>
+        <li>Function components can include logic and calculations.</li>
+        <img src="./assests/images/loginInaFunctionalComponent.jpg" alt="functional component with logic">
+        <li>By placing the calculations before the return statement, you can perform operations and store the result in
+          variables.</li>
+        <li>These calculations can involve any JavaScript code, such as mathematical operations, conditionals, or
+          function calls.</li>
+        <li>The calculated value can then be used within the JSX element by injecting the variable using curly braces.
+        </li>
+        <li>It is important to ensure that the logic and calculations are placed before the return statement in the
+          function component.</li>
+        <img src="./assests/images/incorrectLogicInaFunctionalComponent.jpg"
+          alt="incorect logic in a functional component">
+        <li>Placing logic within the return statement directly, without proper syntax, will result in a syntax error.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Event Listener & Event Handlers in a Component</h2>
+      <ul>
+        <li>Function components can include event handlers to respond to interactions with the interface, such as
+          clicking or hovering.</li>
+        <li>Event handlers are functions that define the logic for what should happen when an event occurs.</li>
+        <img src="./assests/images/eventHandlerComponent.jpg" alt="event handler">
+        <li>Event handlers are defined inside the function component and typically start with the word "handle" followed
+          by the type of event they are handling.</li>
+        <li>Event handlers are passed as props to JSX elements.</li>
+        <img src="./assests/images/eventHandlerComponentwithNoParenthesis.jpg" alt="event handler with no parenthesis">
+        <li>When passing an event handler, do not include the parentheses after the function name. This ensures that the
+          function is called only when the event occurs, rather than immediately.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Review: Components & Advanced JSX</h2>
+      <ul>
+        <li>Function components can return multiple JSX lines by nesting the elements in a parent element.</li>
+        <li>Variable attributes can be used inside of a React component with JavaScript injections.</li>
+        <li>React components support logic by putting the logic statements above the return statements. </li>
+        <li>Components can conditionally return JSX elements by putting conditional statements inside of the components.
+        </li>
+        <li>Components can respond to events by defining event handlers and passing them to the JSX elements.</li>
+      </ul>
+    </section>
+
     <section>
       <h2></h2>
       <ul>
