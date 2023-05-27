@@ -621,6 +621,11 @@
           .render() method on it.</li>
         <li></li>
       </ul>
+      <p>
+        <a href="https://www.codecademy.com/learn/learn-react-introduction/modules/learn-react-components/cheatsheet">Codecademy
+          -
+          Components Cheatsheet</a>
+      </p>
     </section>
 
     <h2>Components & Advanced JSX</h2>
@@ -735,6 +740,185 @@
         <li>Components can interact with each other by returning instances of each other. </li>
         <li>Components interacting allows them to be broken into smaller components, stored into separate files, and
           reused when necessary.</li>
+      </ul>
+    </section>
+
+    <h2>Props</h2>
+
+    <section>
+      <h2>Props</h2>
+      <ul>
+        <li>Components in React can communicate with each other by passing information through props.</li>
+        <li>Props allow customization of the output of a component based on the information that is passed in.</li>
+        <li>Props provide a way to pass data from a parent component to a child component.</li>
+        <li>By using props, components can become more flexible and dynamic in their behavior.</li>
+        <li>Props enable components to be reusable and adaptable in different contexts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Access a Components Props</h2>
+      <ul>
+        <li>Every component in React has a props object that holds information about that component.</li>
+        <li>Props allow us to pass information from a parent component to a child component.</li>
+        <li>Props serve a similar purpose as arguments in functions.</li>
+        <img src="./assests/images/accessingProps.jpg" alt="accessing props">
+        <li>To access a component's props, we can use dot notation and reference the specific property we want to
+          access.</li>
+        <li>We can use props to customize the behavior and output of components based on the information passed to them.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pass 'props' to a Component</h2>
+      <ul>
+        <li>To pass information (props) to a React component, you give the component an attribute.</li>
+        <li>The attribute name represents the name of the prop you want to pass, and the attribute value represents the
+          value of that prop.</li>
+        <img src="./assests/images/componentAttribute.jpg" alt="component attribute">
+        <li>Props can hold any type of information, including strings, numbers, booleans, and even arrays or objects.
+        </li>
+        <li>If you want to pass a non-string value as a prop, you need to wrap it in curly braces.</li>
+        <img src="./assests/images/nonStringProps.jpg" alt="non string props">
+      </ul>
+    </section>
+
+    <section>
+      <h2>Render a Components Props</h2>
+      <ul>
+        <li>To access the props object inside a function component, define the component with props as the parameter.
+        </li>
+        <img src="./assests/images/propsParameter.jpg" alt="props parameter">
+        <li>The props object contains the information passed to the component.</li>
+        <li>You can access the values of props using dot notation (props.propertyName).</li>
+        <img src="./assests/images/destructuresProps.jpg" alt="destructured props">
+        <li>Alternatively, you can use destructuring syntax to extract specific props values directly in the function
+          signature. For example, function Button({displayText}) extracts the displayText prop from the props object.
+        </li>
+        <li>Inside the component's return statement, you can use the props values to render the desired output.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pass Props from Component to Component</h2>
+      <ul>
+        <li>Props in React are passed from parent components to child components.</li>
+        <img src="./assests/images/parentPassingPropsToChildComponent.jpg"
+          alt="parent passing props to child component">
+        <li>The parent component defines the props and passes them to the child component.</li>
+        <li>Props are immutable, meaning they cannot be changed by the child component.</li>
+        <li>If a component needs new values for its props, it should rely on the parent component to pass new props.
+        </li>
+        <li>Props travel in a one-way direction, from the top (parent) component to the bottom (child) component.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Render Different UI Based on Props</h2>
+      <ul>
+        <li>Props can be used to make decisions and render different UI based on the values they hold.</li>
+        <li>Instead of directly displaying the prop value, you can use it to conditionally render different components
+          or content.</li>
+        <li>By using conditional statements like if and else, you can check the prop values and return different JSX
+          elements based on the conditions.</li>
+        <img src="./assests/images/conditionalProp.jpg" alt="conditional prop">
+        <li>This allows you to customize the rendering of a component based on the values passed through props.</li>
+        <li>The prop values themselves are not displayed, but they are used to determine the output.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Put an Event Handler in a Function Component</h2>
+      <ul>
+        <li>Event handlers in React are defined as methods on the function component.</li>
+        <li>To define an event handler, you create a function within the function component.</li>
+        <img src="./assests/images/eventHandler.jpg" alt="event handler">
+        <li>In the example, the event handler method is defined as handleEvent().</li>
+        <li>The event handler is attached to an event, such as a click event, using the onClick attribute.</li>
+        <li>In this case, the event handler handleEvent is attached to the onClick event.</li>
+        <li>When the element is clicked, the event handler function will be called.</li>
+        <li>Inside the event handler, you can define the desired behavior or action to be performed, such as displaying
+          an alert message.</li>
+        <li>Event handlers allow you to respond to user interactions and perform actions based on those interactions.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>handleEvent, onEvent, and props.onEvent</h2>
+      <ul>
+        <li>When defining an event handler, you need to choose two names: the name of the event handler function itself
+          and the name of the prop used to pass the event handler.</li>
+        <img src="./assests/images/handleEventNaming.jpg" alt="handleEvent naming">
+        <li>The event handler function's name follows a naming convention based on the type of event you are listening
+          for. For example, if you are listening for a "click" event, you can name your event handler function as
+          handleClick. If you are listening for a "hover" event, you can name it as handleHover.</li>
+        <img src="./assests/images/propNaming.jpg" alt="prop naming">
+        <li>The prop name that is used to pass the event handler follows the pattern of "on" plus the event type. For
+          example, if you are listening for a "click" event, the prop name can be onClick. If you are listening for a
+          "hover" event, the prop name can be onHover.</li>
+        <li>By following this naming convention, it becomes easier to understand the purpose and functionality of the
+          event handler and the prop.</li>
+        <li>Using consistent naming conventions improves code readability and makes it easier to understand the flow of
+          data and interactions between components.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>props.children</h2>
+      <ul>
+        <li>The props.children property returns everything that is passed between the opening and closing tags of a
+          component.</li>
+        <li>It allows components to have dynamic content and makes them flexible and reusable.</li>
+        <img src="./assests/images/noChildProp.jpg" alt="component with no children">
+        <li>When a component has no children, props.children will be undefined.</li>
+        <img src="./assests/images/singleChildProp.jpg" alt="component with a single child">
+        <li>If a component has a single child, props.children will return that child without being wrapped in an array.
+        </li>
+        <img src="./assests/images/multiChildProp.jpg" alt="component with multiple children">
+        <li>If a component has multiple children, props.children will return an array containing all the children.</li>
+        <li>This allows components to handle different content and structures based on what is passed to them as
+          children.</li>
+        <li>The value of props.children can be text, other components, or a combination of both.</li>
+        <li>By utilizing props.children, components can be composed and structured in a more flexible and customizable
+          way.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Giving Default Values to Props</h2>
+      <ul>
+        <li>When working with React components, you may encounter situations where a prop is not passed, and you want to
+          provide a default value for it.</li>
+        <li>There are three ways to specify default values for props:</li>
+        <img src="./assests/images/defaultPropStaticProperty.jpg" alt="default props static property">
+        <li>Using the defaultProps static property: Define a defaultProps property on the component and assign an object
+          with the prop name and its default value.</li>
+        <img src="./assests/images/defultPropFunctionDefinition.jpg" alt="default prop function definition">
+        <li>Specifying the default value in the function definition using destructuring: Include the prop with a default
+          value in the function parameter.</li>
+        <img src="./assests/images/defaultPropFunctionBody.jpg" alt="default prop function body">
+        <li>Setting the default value within the function body: Destructure the prop and assign a default value using
+          the assignment operator.</li>
+        <li>If no value is passed for the prop, the default value will be used.</li>
+        <li>If a value is passed for the prop, it will override the default value and be displayed instead.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2></h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </section>
 
